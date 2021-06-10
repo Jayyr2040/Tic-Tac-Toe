@@ -8,3 +8,8 @@
     border:1px solid black;
     cursor: pointer;
 }
+
+.gameBox:hover {
+    background-color: pink;
+
+}
