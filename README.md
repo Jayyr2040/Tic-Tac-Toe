@@ -35,8 +35,7 @@ You must submit a tic-tac-toe with the following:
 - If a square already contains an "X" or an "O", it should not change with subsequent clicks
 - The game must have win conditions (three in a row horizontally or vertically should make the user win, don't worry about diagonals -- that's bonus!)
 	* Make it so that when a user wins, a modal pops up that displays who won (e.g. "X player won!" or "O player won!" or "No one won!")
-- Your app must be responsive, remember: design for mobile first!
-	* Wireframe your designs (mobile and desktop) and upload a photo of it inside your `tic_tac_toe` directory
+
 
 ## Commit! 
 
@@ -112,7 +111,7 @@ Again, you can tackle the homework however you like but if you want more guidanc
 
 1. A `tic_tac_toe` directory with...
 	* `app.js`, `index.html` and `style.css`
-	* An uploaded photo of your wireframe design for the app (mobile and desktop design!)
+	
 	 
 ## Technical Requirements
 1. Look back at the provided **MVP** to see what's **required** for this homework 
