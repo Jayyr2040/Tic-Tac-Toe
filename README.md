@@ -30,7 +30,7 @@ List the ready features here:
 - Interactive game
 
 ## Screenshots
-![Example screenshot](./TicTacToe.png)
+![Example screenshot](TicTacToe.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 ## Setup
