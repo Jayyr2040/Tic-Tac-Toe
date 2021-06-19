@@ -1,3 +1,6 @@
+// This is to build a Tic Tac Toe game 
+// User able to select how sides game they want
+
 let isItX = true;
 let Xcounter = 0;
 let Ocounter = 0;
@@ -31,7 +34,6 @@ const isFilled = (event) => {
 };
 
 const checkWinner = (event) => {
-  const $target = $(event.currentTarget);
   const result = checkHorizontal(event);
   const result2 = checkVertical(event);
   const result3 = checkDiagonal(event);
@@ -204,7 +206,8 @@ const generateBoard = () => {
 
   for (let i = 300; i < 300 + numberOfSides; i++) {
     const $div = $("<div>");
-    $body.append($div.addClass("gameBoard").attr("id", `${i}`));
+    $body.append($div.addClass("gameBoardMain"));
+    $(".gameBoardMain").append($div.addClass("gameBoard").attr("id", `${i}`));
     for (let j = counter[i - 300]; j < counter[i - 300] + numberOfSides; j++) {
       const $div = $("<div>");
       $(`#${i}`).append(
@@ -216,30 +219,37 @@ const generateBoard = () => {
 
 const render = () => {
   const $body = $("body");
+  $body.addClass("color-change-2x");
   $body.empty();
   //isItX = true;
   $body.append($("<h1>").text("Tic Tac Toe"));
   $body.append(
-    $("<button>")
-      .text("Reset Game")
-      .on("click", render)
-      .css("background-color", "pink")
-  );
-  $body.append($("<button>").text(`Player X score is ${Xcounter}`));
-  $body.append($("<button>").text(`Player O score is ${Ocounter}`));
-  $body.append(
-    $("<button>").attr("id", "turn").css("background-color", "lightgreen")
+    $("<button>").attr("id", "input2").text("Start New Game").on("click", generateBoard).addClass("btn btn-info btn-sm").css({"background-color": "#82ed92"})
   );
   $body.append(
     $("<input>").attr({
       id: "input1",
       type: "number",
-      placeholder: "No of sides",
-    })
+      placeholder: "No of sides"
+    }).css({"height": "30.8px","width": "120px"})
   );
+
   $body.append(
-    $("<button>").attr("id", "input2").text("Sides").on("click", generateBoard)
+    $("<button>")
+      .text("Reset Game")
+      .on("click", render)
+      .css("background-color", "pink")
+      .addClass("btn btn-danger btn-sm")
   );
+  $body.append($("<button>").text(`Player X score is ${Xcounter}`).addClass("btn btn-info btn-sm").css("background-color", "#f5d742"));
+  $body.append($("<button>").text(`Player O score is ${Ocounter}`).addClass("btn btn-info btn-sm").css("background-color", "#f5d742"));
+  $body.append(
+    $("<button>").attr("id", "turn").css({"background-color": "#fc034e","width": "100px"}).addClass("btn btn-info btn-sm")
+  );
+ 
+  $body.append($("<br>"));
+  $body.append($("<br>"));
+  $body.append($("<br>"));
   if (isItX === true) {
     $("#turn").text("X's turn");
   }
