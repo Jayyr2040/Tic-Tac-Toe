@@ -34,7 +34,7 @@ List the ready features here:
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 ## Setup
-Open the index.html in a browser
+Open the index.html in a browser.
 
 ## Usage
 Users take turns to place their choices. Turns are indicated on the menu
